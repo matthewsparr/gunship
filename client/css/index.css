@@ -1,0 +1,275 @@
+body {
+ background-image: url("pinkskyfull.jpg") !important;
+ background-size: cover;
+ background-position: center;
+ padding-bottom: 15px;
+}
+
+
+@font-face{
+	font-family: "Airstream";
+	src: url("fonts/Airstream.woff") format('woff');
+}
+
+@font-face{
+  font-family: "Akashi";
+  src: url("fonts/Akashi.ttf") format('TrueType');
+}
+
+#page1 {
+  padding-top: 200px;
+  height: 1000px;
+}
+
+#page2 {
+  height: 1000px;
+}
+
+#page3 {
+  height: 1000px;
+}
+
+#page4 {
+  height: 1000px;
+}
+
+.smooth {
+  size: fixed;
+  margin-top: 200px;
+}
+
+#home {
+  height: 1000px;
+  padding-top: 100px;
+}
+
+#about {
+  height: 1000px;
+  padding-top: 100px;
+}
+
+#portfolio {
+  height: 1000px;
+  padding-top: 100px;
+}
+
+#contact {
+  height: 1000px;
+  padding-top: 100px;
+}
+
+.sectionright {
+  /*background-color: rgba(0, 0, 0, 1);*/
+  padding: 100px;
+  border-right-color: #fffc59 !important;
+  border-right-width: 12px;
+  border-right-style: solid;
+  border-radius: 25px;
+  height: 500px;
+  margin-top: 35px;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: white;
+}
+
+.sectionleft {
+  /*background-color: rgba(0, 0, 0, 1);*/
+  padding: 100px;
+  border-left-style: solid;
+  border-radius: 25px;
+  border-left-color: #fffc59 !important;
+  border-left-width: 12px;
+  height: 500px;
+  margin-top: 35px;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: white;
+}
+
+.mynav {
+  border-bottom-color: white !important;
+  border-bottom-width: 4px !important;
+  border-bottom-style: solid; 
+  border-bottom-left-radius: .5;
+  border-bottom-right-radius: 1;
+  box-shadow: 0 4px 8px 0 rgba(191, 191, 191, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  background-color: white !important;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  text-align: center;
+  vertical-align: central;
+  float: left;
+  line-height: 55px;
+
+}
+
+.navstyle {
+  color: #ff0cf2 !important;
+  vertical-align: central;
+}
+
+.navright {
+  float: right !important;
+  font-size:25px !important;
+  vertical-align: central;
+}
+
+.navleft {
+  float: left !important;
+  font-size: 25px;
+}
+
+.navcenter {
+  font-size: 35px;
+  /* float: none !important;*/
+  /*display: inline-block !important;*/
+  /*text-align: center !important;*/
+
+}
+
+#brandlogo {
+  content: url("gun2.png");
+  height: 75px;
+  width: 100px;
+}
+
+.coolcolor {
+	color: #ff0cf2 !important;
+}
+
+.black {
+	background-color: black;
+	height: 850px;
+}
+
+.pink {
+	background-color: black;
+	background-image: url(/client/img/neongrid.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 850px;
+}
+
+.navbar-default {
+  background-color: #000000;
+  border-color: #7204ff;
+}
+.navbar-default .navbar-brand {
+  color: #d111ec;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #7a7a7b;
+}
+.navbar-default .navbar-text {
+  color: #d111ec;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #d111ec;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #7a7a7b;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #7a7a7b;
+  background-color: #7204ff;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #7a7a7b;
+  background-color: #7204ff;
+}
+.navbar-default .navbar-toggle {
+  border-color: #7204ff;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #7204ff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #d111ec;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #d111ec;
+}
+.navbar-default .navbar-link {
+  color: #d111ec;
+}
+.navbar-default .navbar-link:hover {
+  color: #7a7a7b;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #d111ec;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #7a7a7b;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #7a7a7b;
+    background-color: #7204ff;
+  }
+}
+
+#navbar-background {
+	background-color: black;
+	color: black;
+}
+
+
+
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 2000;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+
+
+
+

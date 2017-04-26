@@ -86,12 +86,17 @@ server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
 var express = require('express');
 var app = express.createServer();
 
+var http = require('http'),
+    fs = require('fs');
 
-var http = require('http');
-var fs = require('fs');
-var index = fs.readFileSync('index.html');
 
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end(index);
-}).listen(9615);
+fs.readFile('./index.html', function (err, html) {
+    if (err) {
+        throw err; 
+    }       
+    http.createServer(function(request, response) {  
+        response.writeHeader(200, {"Content-Type": "text/html"});  
+        response.write(html);  
+        response.end();  
+    }).listen(8000);
+});

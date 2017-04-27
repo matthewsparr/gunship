@@ -16,9 +16,37 @@ body {
   src: url("fonts/Akashi.ttf") format('TrueType');
 }
 
+@font-face{
+  font-family: "Intruder";
+  src: url("fonts/Intruder.ttf") format('TrueType');
+}
+
+@font-face{
+  font-family: "Jura";
+  src: url("fonts/Jura.otf") format('OpenType');
+}
+
+@font-face{
+  font-family: "Bigfish";
+  src: url("fonts/Bigfish.ttf") format('TrueType');
+}
+
+@font-face{
+  font-family: "Vanilla";
+  src: url("fonts/Vanilla.ttf") format('TrueType');
+}
+
+@font-face{
+  font-family: "data";
+  src: url("fonts/data.ttf") format('TrueType');
+}
+
+
+
 #page1 {
-  padding-top: 200px;
   height: 1000px;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 #page2 {
@@ -35,17 +63,18 @@ body {
 
 .smooth {
   size: fixed;
-  margin-top: 200px;
+  /*margin-top: 200px;*/
 }
 
 #home {
   height: 1000px;
-  padding-top: 100px;
 }
 
 #about {
   height: 1000px;
   padding-top: 100px;
+  font-family: "Jura";
+  font-size: 30px;
 }
 
 #portfolio {
@@ -60,7 +89,8 @@ body {
 
 .sectionright {
   /*background-color: rgba(0, 0, 0, 1);*/
-  padding: 100px;
+  padding-right: 100px;
+  padding-left: 100px;
   border-right-color: #fffc59 !important;
   border-right-width: 12px;
   border-right-style: solid;
@@ -74,7 +104,8 @@ body {
 
 .sectionleft {
   /*background-color: rgba(0, 0, 0, 1);*/
-  padding: 100px;
+  padding-right: 100px;
+  padding-left: 100px;
   border-left-style: solid;
   border-radius: 25px;
   border-left-color: #fffc59 !important;
@@ -95,7 +126,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(191, 191, 191, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
   background-color: white !important;
   position: fixed;
-  z-index: 1000;
+  z-index: 5000;
   width: 100%;
   text-align: center;
   vertical-align: central;
@@ -128,14 +159,20 @@ body {
 
 }
 
-#brandlogo {
+.brandlogo {
   content: url("gun2.png");
   height: 75px;
   width: 100px;
 }
 
+.navbtn {
+  color: black;
+  background-color:black;
+}
+
 .coolcolor {
 	color: #ff0cf2 !important;
+	font-family: "Akashi";
 }
 
 .black {
@@ -228,48 +265,101 @@ body {
 
 
 
-.homepage-hero-module {
-    border-right: none;
-    border-left: none;
-    position: relative;
-}
-.no-video .video-container video,
-.touch .video-container video {
-    display: none;
-}
-.no-video .video-container .poster,
-.touch .video-container .poster {
-    display: block !important;
-}
-.video-container {
-    position: relative;
-    bottom: 0%;
-    left: 0%;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background: #000;
-}
-.video-container .poster img {
-    width: 100%;
-    bottom: 0;
-    position: absolute;
-}
-.video-container .filter {
-    z-index: 2000;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.4);
-    width: 100%;
-}
-.video-container video {
-    position: absolute;
-    z-index: 0;
-    bottom: 0;
-}
-.video-container video.fillWidth {
-    width: 100%;
-}
+/*.homepage-hero-module {*/
+/*    border-right: none;*/
+/*    border-left: none;*/
+/*    position: relative;*/
+/*}*/
+/*.no-video .video-container video,*/
+/*.touch .video-container video {*/
+/*    display: none;*/
+/*}*/
+/*.no-video .video-container .poster,*/
+/*.touch .video-container .poster {*/
+/*    display: block !important;*/
+/*}*/
+/*.video-container {*/
+/*    position: relative;*/
+/*    bottom: 0%;*/
+/*    left: 0%;*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*    overflow: hidden;*/
+/*    background: #000;*/
+/*}*/
+/*.video-container .poster img {*/
+/*    width: 100%;*/
+/*    bottom: 0;*/
+/*    position: absolute;*/
+/*}*/
+/*.video-container .filter {*/
+/*    z-index: -200;*/
+/*    position: absolute;*/
+/*    background: rgba(0, 0, 0, 0.4);*/
+/*    width: 100%;*/
+/*}*/
+/*.video-container video {*/
+/*    position: absolute;*/
+/*    z-index: 0;*/
+/*    bottom: 0;*/
+/*}*/
+/*.video-container video.fillWidth {*/
+/*    width: 100%;*/
+/*}*/
 
 
+.videoPanel {
+  width: 100%;
+  height: 750px;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
 
+#videoOverlay {
+  color: white;
+  float: left;
+  z-index: 4000;
+  position: absolute;
+  background-color: rgba(114, 47, 182, 0.63);
+  height: 650px;
+  width: 100%;
+  margin-top: 80px;
+  padding-top: 50px;
+  font-family: "Jura";
+  text-align: center;
+  font-size: 80px;
+  
+}
+
+#newHeightsText {
+  font-family: "Airstream";
+  white-space: pre-line;
+  font-size: 130px;
+}
+
+#robust {
+  font-family: "data";
+  font-size: 45px;
+}
+
+#powerful {
+  font-family: "Bigfish";
+    font-size: 30px;
+}
+
+#creative {
+  font-family: "Vanilla";
+    font-size: 30px;
+}
+
+.hamburger {
+  color: black;
+  size: 100px;
+  height: 40px;
+  width: 40px;
+  content: url("hamburger.png");
+  vertical-align: center;
+}
 

@@ -103,5 +103,5 @@ fs.readFile('./client/index.html', function (err, html) {
 
 
 app.get('/keys', function (req, res,html) {
- res.sendFile(path.join(__dirname, '../client', 'keys.html'));
+ res.sendFile('client/keys.html' , { root : __dirname});
 });

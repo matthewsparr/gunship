@@ -102,6 +102,6 @@ fs.readFile('./client/index.html', function (err, html) {
 });
 
 
-app.get('/keys', function (req, res) {
+server.get('/keys', function (req, res) {
  res.sendFile('./client/keys.html');
 });

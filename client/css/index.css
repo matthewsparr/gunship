@@ -3,6 +3,7 @@ body {
  background-size: cover;
  background-position: center;
  padding-bottom: 15px;
+ font-size: 16px;
 }
 
 
@@ -44,21 +45,27 @@ body {
 
 
 #page1 {
-  height: 1000px;
+  height: 100%;
   padding-top: 0;
   margin-top: 0;
 }
 
 #page2 {
-  height: 1000px;
+  height: 100%;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 #page3 {
-  height: 1000px;
+  height: 100%;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 #page4 {
-  height: 1000px;
+  height: 100%;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 .smooth {
@@ -67,24 +74,22 @@ body {
 }
 
 #home {
-  height: 1000px;
+  height: 100%;
 }
 
 #about {
-  height: 1000px;
-  padding-top: 100px;
+  height: 100%;
   font-family: "Jura";
   font-size: 30px;
 }
 
 #portfolio {
-  height: 1000px;
-  padding-top: 100px;
+  height: 100%;
+
 }
 
 #contact {
-  height: 1000px;
-  padding-top: 100px;
+  height: 100%;
 }
 
 .sectionright {
@@ -95,10 +100,10 @@ body {
   border-right-width: 12px;
   border-right-style: solid;
   border-radius: 25px;
-  height: 500px;
-  margin-top: 35px;
-  margin-left: 50px;
-  margin-right: 50px;
+  height: 50%;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
   color: white;
 }
 
@@ -119,11 +124,11 @@ body {
 
 .mynav {
   border-bottom-color: white !important;
-  border-bottom-width: 4px !important;
+  border-bottom-width: .25em !important;
   border-bottom-style: solid; 
   border-bottom-left-radius: .5;
   border-bottom-right-radius: 1;
-  box-shadow: 0 4px 8px 0 rgba(191, 191, 191, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  box-shadow: 0 .25em .5em 0 rgba(191, 191, 191, 0.2), 0 .38em 1.1em 0 rgba(255, 255, 255, 0.19);
   background-color: white !important;
   position: fixed;
   z-index: 5000;
@@ -131,7 +136,7 @@ body {
   text-align: center;
   vertical-align: central;
   float: left;
-  line-height: 55px;
+  line-height: 3.5em;
 
 }
 
@@ -142,17 +147,17 @@ body {
 
 .navright {
   float: right !important;
-  font-size:25px !important;
+  font-size: 1.5em !important;
   vertical-align: central;
 }
 
 .navleft {
   float: left !important;
-  font-size: 25px;
+  font-size: 1.5em;
 }
 
 .navcenter {
-  font-size: 35px;
+  font-size: 2em;
   /* float: none !important;*/
   /*display: inline-block !important;*/
   /*text-align: center !important;*/
@@ -161,8 +166,8 @@ body {
 
 .brandlogo {
   content: url("gun2.png");
-  height: 75px;
-  width: 100px;
+  height: 2.2em;
+  width: 2.2em;
 }
 
 .navbtn {
@@ -175,18 +180,6 @@ body {
 	font-family: "Akashi";
 }
 
-.black {
-	background-color: black;
-	height: 850px;
-}
-
-.pink {
-	background-color: black;
-	background-image: url(/client/img/neongrid.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	height: 850px;
-}
 
 .navbar-default {
   background-color: #000000;
@@ -258,59 +251,11 @@ body {
   }
 }
 
-#navbar-background {
-	background-color: black;
-	color: black;
-}
-
-
-
-/*.homepage-hero-module {*/
-/*    border-right: none;*/
-/*    border-left: none;*/
-/*    position: relative;*/
-/*}*/
-/*.no-video .video-container video,*/
-/*.touch .video-container video {*/
-/*    display: none;*/
-/*}*/
-/*.no-video .video-container .poster,*/
-/*.touch .video-container .poster {*/
-/*    display: block !important;*/
-/*}*/
-/*.video-container {*/
-/*    position: relative;*/
-/*    bottom: 0%;*/
-/*    left: 0%;*/
-/*    height: 100%;*/
-/*    width: 100%;*/
-/*    overflow: hidden;*/
-/*    background: #000;*/
-/*}*/
-/*.video-container .poster img {*/
-/*    width: 100%;*/
-/*    bottom: 0;*/
-/*    position: absolute;*/
-/*}*/
-/*.video-container .filter {*/
-/*    z-index: -200;*/
-/*    position: absolute;*/
-/*    background: rgba(0, 0, 0, 0.4);*/
-/*    width: 100%;*/
-/*}*/
-/*.video-container video {*/
-/*    position: absolute;*/
-/*    z-index: 0;*/
-/*    bottom: 0;*/
-/*}*/
-/*.video-container video.fillWidth {*/
-/*    width: 100%;*/
-/*}*/
 
 
 .videoPanel {
   width: 100%;
-  height: 750px;
+  height: 100%;
   font-size: 0;
   margin: 0;
   padding: 0;
@@ -323,10 +268,8 @@ body {
   z-index: 4000;
   position: absolute;
   background-color: rgba(114, 47, 182, 0.63);
-  height: 650px;
+  height: 100%;
   width: 100%;
-  margin-top: 80px;
-  padding-top: 50px;
   font-family: "Jura";
   text-align: center;
   font-size: 80px;

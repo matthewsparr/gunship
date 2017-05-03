@@ -90,7 +90,7 @@ var http = require('http'),
     fs = require('fs');
 
 
-fs.readFile('./client/index.html', function (err, html) {
+fs.readFile('./client/indexNew.html', function (err, html) {
     if (err) {
         throw err; 
     }       
@@ -99,4 +99,9 @@ fs.readFile('./client/index.html', function (err, html) {
         response.write(html);  
         response.end();  
     }).listen(8000);
+});
+
+
+app.get('/keys', function (req, res,html) {
+ res.sendFile(path.join(__dirname+'/keys.html'));
 });

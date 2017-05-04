@@ -110,7 +110,7 @@ var http = require('http'),
 // });
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname+'/index.html'))
+  res.sendFile(path.join(__dirname+'/keys.html'))
 });
 
 app.get('/keys', function (req, res) {

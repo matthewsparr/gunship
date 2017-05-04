@@ -121,6 +121,7 @@
 
 var app = require("express")()
 var path  = require("path");
+var http = require('http');
 
 
 app.get('/',function(req,res){
@@ -128,8 +129,8 @@ app.get('/',function(req,res){
   //__dirname : It will resolve to your project folder.
 });
 
-app.get('/about',function(req,res){
+app.get('/keys',function(req,res){
   res.sendFile(path.join(__dirname+'/keys.html'));
 });
 
-app.listen(8000);
+app.listen(3000);

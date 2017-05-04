@@ -83,31 +83,31 @@
 //   console.log("Chat server listening at", addr.address + ":" + addr.port);
 // });
 
-var express = require('express');
-var app = express.createServer();
+// var express = require('express');
+// var app = express.createServer();
 
-var http = require('http'),
-    fs = require('fs');
-
-
-fs.readFile('./client/index.html', function (err, html) {
-    if (err) {
-        throw err; 
-    }       
-    http.createServer(function(request, response) {  
-        response.writeHeader(200, {"Content-Type": "text/html"});  
-        response.write(html);  
-        response.end();  
-    }).listen(8000);
-});
+// var http = require('http'),
+//     fs = require('fs');
 
 
-// app.use(express.static(__dirname + '/client'));
+// fs.readFile('./client/index.html', function (err, html) {
+//     if (err) {
+//         throw err; 
+//     }       
+//     http.createServer(function(request, response) {  
+//         response.writeHeader(200, {"Content-Type": "text/html"});  
+//         response.write(html);  
+//         response.end();  
+//     }).listen(8000);
+// });
 
 
-app.get('/keys', function (req, res) {
-res.sendFile('keys.html');
-});
+// // app.use(express.static(__dirname + '/client'));
+
+
+// app.get('/keys', function (req, res) {
+// res.sendFile('keys.html');
+// });
 
 // app.get('/', function (req, res) {
 //   res.sendFile(path.join(__dirname+'/keys.html'))
@@ -118,3 +118,19 @@ res.sendFile('keys.html');
 // });
 
 // app.listen(3000);
+
+var express = require("express");
+var app     = express();
+var path    = require("path");
+
+
+app.get('/',function(req,res){
+  res.sendFile(path.join(__dirname+'/index.html'));
+  //__dirname : It will resolve to your project folder.
+});
+
+app.get('/about',function(req,res){
+  res.sendFile(path.join(__dirname+'/keys.html'));
+});
+
+app.listen(8000);

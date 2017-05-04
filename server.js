@@ -102,6 +102,9 @@ fs.readFile('./client/index.html', function (err, html) {
 });
 
 
-server.get('/keys', function (req, res) {
- res.sendFile('./client/keys.html');
+app.use(express.static(__dirname + '/client'));
+
+
+server.get('/', function (req, res) {
+ res.sendFile('keys.html');
 });

@@ -119,9 +119,8 @@
 
 // app.listen(3000);
 
-var express = require("express");
-var app     = express();
-var path    = require("path");
+var app = require("express")()
+var path  = require("path");
 
 
 app.get('/',function(req,res){

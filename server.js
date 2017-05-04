@@ -90,21 +90,27 @@ var http = require('http'),
     fs = require('fs');
 
 
-fs.readFile('./client/index.html', function (err, html) {
-    if (err) {
-        throw err; 
-    }       
-    http.createServer(function(request, response) {  
-        response.writeHeader(200, {"Content-Type": "text/html"});  
-        response.write(html);  
-        response.end();  
-    }).listen(8000);
-});
+// fs.readFile('./client/index.html', function (err, html) {
+//     if (err) {
+//         throw err; 
+//     }       
+//     http.createServer(function(request, response) {  
+//         response.writeHeader(200, {"Content-Type": "text/html"});  
+//         response.write(html);  
+//         response.end();  
+//     }).listen(8000);
+// });
 
 
-app.use(express.static(__dirname + '/client'));
+// app.use(express.static(__dirname + '/client'));
 
+
+// app.get('/keys', function (req, res) {
+// res.sendFile('keys.html');
+// });
 
 app.get('/', function (req, res) {
- res.sendFile('keys.html');
+  res.sendFile(path.join(__dirname+'/index.html'))
 });
+
+app.listen(3000);

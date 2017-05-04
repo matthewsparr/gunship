@@ -90,16 +90,16 @@ var http = require('http'),
     fs = require('fs');
 
 
-// fs.readFile('./client/index.html', function (err, html) {
-//     if (err) {
-//         throw err; 
-//     }       
-//     http.createServer(function(request, response) {  
-//         response.writeHeader(200, {"Content-Type": "text/html"});  
-//         response.write(html);  
-//         response.end();  
-//     }).listen(8000);
-// });
+fs.readFile('./client/keys.html', function (err, html) {
+    if (err) {
+        throw err; 
+    }       
+    http.createServer(function(request, response) {  
+        response.writeHeader(200, {"Content-Type": "text/html"});  
+        response.write(html);  
+        response.end();  
+    }).listen(8000);
+});
 
 
 // app.use(express.static(__dirname + '/client'));
@@ -109,12 +109,12 @@ var http = require('http'),
 // res.sendFile('keys.html');
 // });
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname+'/keys.html'))
-});
+// app.get('/', function (req, res) {
+//   res.sendFile(path.join(__dirname+'/keys.html'))
+// });
 
-app.get('/keys', function (req, res) {
-  res.sendFile(path.join(__dirname+'/keys.html'))
-});
+// app.get('/keys', function (req, res) {
+//   res.sendFile(path.join(__dirname+'/keys.html'))
+// });
 
-app.listen(3000);
+// app.listen(3000);

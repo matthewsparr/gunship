@@ -113,4 +113,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname+'/index.html'))
 });
 
+app.get('/keys', function (req, res) {
+  res.sendFile(path.join(__dirname+'/keys.html'))
+});
+
 app.listen(3000);

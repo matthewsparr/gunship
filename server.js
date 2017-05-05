@@ -173,7 +173,7 @@ var app = express();
 
 app.use(express.static(__dirname + '/client'));
 
-console.log(__dirname);
+console.log("so dirname is  " + __dirname);
 
 app.all("*", function(request, response, next) {
   response.writeHead(200, { "Content-Type": "text/plain" });

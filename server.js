@@ -123,7 +123,7 @@ var app = require("express")()
 var path  = require("path");
 var http = require('http');
 
-var router = express();
+var router = app.express();
 var server = http.createServer(router);
 
 

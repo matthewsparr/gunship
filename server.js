@@ -123,6 +123,9 @@ var app = require("express")()
 var path  = require("path");
 var http = require('http');
 
+var router = express();
+var server = http.createServer(router);
+
 
 app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/index.html'));

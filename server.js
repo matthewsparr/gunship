@@ -170,6 +170,8 @@
 var express = require("express");
 var http = require("https");
 var app = express();
+var path  = require("path");
+
 
 app.use(express.static(__dirname + '/client'));
 
@@ -181,11 +183,11 @@ app.all("*", function(request, response, next) {
 });
 
 app.get("/", function(request, response) {
-  response.sendFile(__dirname + '/client/index.html');
+  response.sendFile(path.join(__dirname+'/client/index.html'));
 });
 
 app.get("/keys", function(request, response) {
-  response.sendFile(__dirname + '/client/keys.html');
+  response.sendFile(path.join(__dirname+'/client/keys.html'));
 });
 
 app.get("*", function(request, response) {

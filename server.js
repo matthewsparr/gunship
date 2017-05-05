@@ -119,21 +119,33 @@
 
 // app.listen(3000);
 
-var app = require("express")()
-var path  = require("path");
-var http = require('http');
+// var app = require("express")()
+// var path  = require("path");
+// var http = require('http');
 
-var router = app.express();
-var server = http.createServer(router);
+// var router = app.express();
+// var server = http.createServer(router);
 
 
-app.get('/',function(req,res){
-  res.sendFile(path.join(__dirname+'/index.html'));
-  //__dirname : It will resolve to your project folder.
+// app.get('/',function(req,res){
+//   res.sendFile(path.join(__dirname+'/index.html'));
+//   //__dirname : It will resolve to your project folder.
+// });
+
+// app.get('/keys',function(req,res){
+//   res.sendFile(path.join(__dirname+'/keys.html'));
+// });
+
+// app.listen(3000);
+
+var express = require('express'),
+  app = express(),
+  http = require('http'),
+  httpServer = http.Server(app);
+
+app.use(express.static(__dirname + '/client'));
+
+app.get('/', function(req, res) {
+  res.sendfile(__dirname + '/index.html');
 });
-
-app.get('/keys',function(req,res){
-  res.sendFile(path.join(__dirname+'/keys.html'));
-});
-
 app.listen(3000);

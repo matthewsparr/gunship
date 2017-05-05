@@ -185,13 +185,11 @@ app.get("/", function(request, response) {
 });
 
 app.get("/keys", function(request, response) {
-    response.sendFile(__dirname + '/client/keys.html');
+  response.sendFile(__dirname + '/client/keys.html');
 });
 
 app.get("*", function(request, response) {
   response.end("404!");
 });
 
-var port = process.env.PORT || 8080;
-
-http.createServer(app).listen(port);
+http.createServer(app).listen(process.env.PORT || 8080);

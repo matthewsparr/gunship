@@ -177,19 +177,11 @@ app.use(express.static(path.join(__dirname, '../client')));
 app.use("/", express.static(__dirname));
 app.use('/', express.static(__dirname + '/client'));
 app.use(express.static(path.resolve(__dirname, 'client')));
-app.use(app.router);
 
 console.log("so dirname is  " + __dirname);
 console.log(". = " + path.resolve("."));
 console.log("__dirname =  " + path.resolve(__dirname));
 
-
-
-
-app.all("*", function(request, response, next) {
-  response.writeHead(200, { "Content-Type": "text/html" });
-  next();
-});
 
 app.get("/", function(request, response) {
   response.sendFile('index.html');

@@ -183,7 +183,7 @@ app.all("*", function(request, response, next) {
 });
 
 app.get("/", function(request, response) {
-  response.sendFile('client/index1.html' , { root : __dirname});
+  response.sendFile('client/index.html' , { root : __dirname});
 });
 
 app.get("/keys", function(request, response) {

@@ -191,7 +191,7 @@ app.all("*", function(request, response, next) {
 });
 
 app.get("/", function(request, response) {
-  response.sendFile('./client/index.html');
+  response.sendFile('index.html');
 });
 
 app.get("/keys", function(request, response) {

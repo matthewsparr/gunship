@@ -173,6 +173,8 @@ var app = express();
 
 app.use(express.static(__dirname + '/client'));
 
+console.log(__dirname);
+
 app.all("*", function(request, response, next) {
   response.writeHead(200, { "Content-Type": "text/plain" });
   next();

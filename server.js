@@ -192,4 +192,6 @@ app.get("*", function(request, response) {
   response.end("404!");
 });
 
-http.createServer(app).listen(1337);
+var port = process.env.PORT || 8080;
+
+http.createServer(app).listen(port);

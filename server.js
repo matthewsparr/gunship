@@ -171,17 +171,19 @@ var express = require("express");
 var http = require("http");
 var app = express();
 
+app.use(express.static(__dirname + '/client'));
+
 app.all("*", function(request, response, next) {
   response.writeHead(200, { "Content-Type": "text/plain" });
   next();
 });
 
 app.get("/", function(request, response) {
-  response.sendFile('./client/index.html');
+  response.sendFile(__dirname + '/client/index.html');
 });
 
 app.get("/keys", function(request, response) {
-    response.sendFile('./client/keys.html');
+    response.sendFile(__dirname + '/client/keys.html');
 });
 
 app.get("*", function(request, response) {

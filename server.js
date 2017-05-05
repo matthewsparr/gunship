@@ -177,6 +177,7 @@ app.use(express.static(path.join(__dirname, '../client')));
 app.use("/", express.static(__dirname));
 app.use('/', express.static(__dirname + '/client'));
 app.use(express.static(path.resolve(__dirname, 'client')));
+app.use(app.router);
 
 console.log("so dirname is  " + __dirname);
 console.log(". = " + path.resolve("."));

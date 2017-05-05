@@ -184,7 +184,7 @@ console.log("__dirname =  " + path.join(__dirname+'/client/keys.html'));
 
 
 app.get("/", function(request, response) {
-  response.sendFile('index.html');
+  response.sendFile(path.join(__dirname+'/client/index.html'));
 });
 
 app.get("/keys", function(request, response) {

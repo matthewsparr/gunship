@@ -180,7 +180,7 @@ app.use(express.static(path.resolve(__dirname, 'client')));
 
 console.log("so dirname is  " + __dirname);
 console.log(". = " + path.resolve("."));
-console.log("__dirname =  " + path.resolve(__dirname));
+console.log("__dirname =  " + path.join(__dirname+'/client/keys.html'));
 
 
 app.get("/", function(request, response) {

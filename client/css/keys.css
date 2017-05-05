@@ -15,6 +15,7 @@ li { margin:0; padding:0; list-style:none; position:relative; float:left; }
 	position: relative;
 	margin-top: 10%;
 	margin-bottom: 10%;
+	z-index: 5000;
 	/*float: left;*/
 	/*margin-left: 200px;*/
 }

@@ -138,14 +138,54 @@
 
 // app.listen(3000);
 
-var express = require('express'),
-  app = express(),
-  http = require('http'),
-  httpServer = http.Server(app);
+// var express = require('express'),
+//   app = express(),
+//   http = require('http'),
+//   httpServer = http.Server(app);
 
-app.use(express.static(__dirname + '/client'));
+// app.use(express.static(__dirname + '/client'));
 
-app.get('/', function(req, res) {
-  res.sendfile(__dirname + '/client/index.html');
+// app.get('/', function(req, res) {
+//   res.sendfile(__dirname + '/client/index.html');
+// });
+// app.listen(3000);
+
+// var http=require('http');
+// var url=require('url');
+
+// var server=http.createServer(function(req,res){
+//     var pathname=url.parse(req.url).pathname;
+//     switch(pathname){
+//         case '/subpage':
+//             res.end('subpage');
+//         break;
+//         default:
+//             res.end('default');
+//         break;
+//     }
+
+// }).listen(8080);
+
+
+var express = require("express");
+var http = require("http");
+var app = express();
+
+app.all("*", function(request, response, next) {
+  response.writeHead(200, { "Content-Type": "text/plain" });
+  next();
 });
-app.listen(3000);
+
+app.get("/", function(request, response) {
+  response.sendFile('./client/index.html');
+});
+
+app.get("/keys", function(request, response) {
+    response.sendFile('./client/keys.html');
+});
+
+app.get("*", function(request, response) {
+  response.end("404!");
+});
+
+http.createServer(app).listen(1337);

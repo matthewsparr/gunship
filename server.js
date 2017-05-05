@@ -186,7 +186,7 @@ console.log("__dirname =  " + path.resolve(__dirname));
 
 
 app.all("*", function(request, response, next) {
-  response.writeHead(200, { "Content-Type": "text/plain" });
+  response.writeHead(200, { "Content-Type": "text/html" });
   next();
 });
 

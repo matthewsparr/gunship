@@ -1,6 +1,7 @@
 <?php
 // Check for empty fields
 require("sendgrid-php.php");
+error_log("log test");
 
 
 if(empty($_POST['name'])  		||
@@ -8,12 +9,12 @@ if(empty($_POST['name'])  		||
    empty($_POST['phone']) 		||
    empty($_POST['message'])	||
    !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-   error_log("got all info");
    {
 	echo "No arguments Provided!";
 	error_log("did not get info");
 	return false;
    }
+   error_log("got all info");
    $name = strip_tags(htmlspecialchars($_POST['name']));
 $email_address = strip_tags(htmlspecialchars($_POST['email']));
 $phone = strip_tags(htmlspecialchars($_POST['phone']));

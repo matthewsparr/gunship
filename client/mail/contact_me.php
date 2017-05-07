@@ -1,5 +1,8 @@
 <?php
 // Check for empty fields
+require("sendgrid-php.php");
+
+
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
    empty($_POST['phone']) 		||
@@ -9,11 +12,43 @@ if(empty($_POST['name'])  		||
 	echo "No arguments Provided!";
 	return false;
    }
-	
-$name = strip_tags(htmlspecialchars($_POST['name']));
+   $name = strip_tags(htmlspecialchars($_POST['name']));
 $email_address = strip_tags(htmlspecialchars($_POST['email']));
 $phone = strip_tags(htmlspecialchars($_POST['phone']));
-$message = strip_tags(htmlspecialchars($_POST['message']));
+$message = 
+	
+	
+	
+$from = new SendGrid\Email(null, "gunshipwebdesignContact@gmail.com");
+$subject = "Contact Form Message";
+$to = new SendGrid\Email(null, "gunshipwebdesign@gmail.com");
+$content = new SendGrid\Content("text/plain", "You have received a new message 
+from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: 
+   $email_address\n\nPhone: $phone\n\nMessage:\n$message");
+$mail = new SendGrid\Mail($from, $subject, $to, $content);
+
+$apiKey = getenv('SENDGRID_API_KEY');
+$sg = new \SendGrid($apiKey);
+
+$response = $sg->client->mail()->send()->post($mail);
+echo $response->statusCode();
+echo $response->headers();
+echo $response->body();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 // Create the email and send the message
 $to = 'gunshipwebdesign@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.

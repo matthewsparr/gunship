@@ -1,6 +1,7 @@
 <?php
 // Check for empty fields
 require("sendgrid-php.php");
+require("Mail.php");
 error_log("log test");
 
 

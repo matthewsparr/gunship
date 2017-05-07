@@ -191,7 +191,7 @@ app.get("/keys", function(request, response) {
   response.sendFile(path.join(__dirname+'/client/keys.html'));
 });
 
-app.post("/contact_me.php", function(request, response) {
+app.post("/mail/contact_me.php", function(request, response) {
   response.sendFile(path.join(__dirname+'/client/mail/contact_me.php'));
 });
 

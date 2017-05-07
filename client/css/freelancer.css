@@ -103,6 +103,10 @@ header .intro-text .skills {
   
 }
 
+.jura {
+  font-family: "Jura";
+}
+
 #brandlogo {
   content: url("gun2.png");
    height: 2.4em;
@@ -330,7 +334,8 @@ section.success {
   margin: 0 auto;
 }
 #portfolio .portfolio-item .portfolio-link .caption {
-  background: rgba(24, 188, 156, 0.9);
+  /*background: rgba(24, 188, 156, 0.9);*/
+  background: black;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -340,7 +345,7 @@ section.success {
   -moz-transition: all ease 0.5s;
 }
 #portfolio .portfolio-item .portfolio-link .caption:hover {
-  opacity: 1;
+  opacity: .85;
 }
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
   position: absolute;
@@ -351,6 +356,7 @@ section.success {
   top: 50%;
   margin-top: -12px;
   color: white;
+  font-family: "Jura";
 }
 #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
   margin-top: -12px;
@@ -424,14 +430,14 @@ footer h3 {
 }
 footer .footer-above {
   padding-top: 50px;
-  background-color: #2C3E50;
+  background-color: white;
 }
 footer .footer-col {
   margin-bottom: 50px;
 }
 footer .footer-below {
   padding: 25px 0;
-  background-color: #233140;
+  background-color: black;
 }
 .btn-outline {
   color: white;

@@ -1,5 +1,6 @@
 /* global $ */
 $(function() {
+    console.log("after function");
 
 $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
 //         preventSubmit: true,
@@ -7,6 +8,9 @@ $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
 //             // additional error messages or events
 //         },
  submitSuccess: function($form, event) {
+     
+         console.log("got submit success");
+
      
          var nodemailer = require("nodemailer");
 

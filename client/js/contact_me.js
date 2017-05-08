@@ -3,10 +3,10 @@ $(function() {
     console.log("after function");
 
 $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
-//         preventSubmit: true,
-//         submitError: function($form, event, errors) {
-//             // additional error messages or events
-//         },
+        preventSubmit: true,
+        submitError: function($form, event, errors) {
+            // additional error messages or events
+        },
  submitSuccess: function($form, event) {
      
          console.log("got submit success");

@@ -43,7 +43,7 @@ var mailOptions = {
             // For Success/Failure Message
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
-                firstName = name.split(' ').slice(0, -1).join(' ');
+                firstName = firstName.split(' ').slice(0, -1).join(' ');
             }
  
 

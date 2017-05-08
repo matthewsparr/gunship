@@ -1,6 +1,4 @@
 /* global $ */
-$(function() {
-    console.log("after function");
 
 $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
@@ -92,5 +90,4 @@ $('#name').focus(function() {
 });
 
 }
-});
 });

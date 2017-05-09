@@ -55,7 +55,7 @@ var nodemailer = require("nodemailer");
 
 var mailOptions = {
     from: "Fred Foo ✔ <foo@blurdybloop.com>", // sender address
-    to: "bar@blurdybloop.com, baz@blurdybloop.com", // list of receivers
+    to: "gunshipwebdesign@gmail.com", // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world ✔", // plaintext body
     html: "<b>Hello world ✔</b>" // html body

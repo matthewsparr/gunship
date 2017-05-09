@@ -123,11 +123,6 @@ h1 {
 /*  	margin-top: 100%;*/
 /*}*/
 
-#instructions {
-	font-family: "Jura";
-	padding-top: 5%;
-	padding-bottom:5%;
-}
 
 @media screen and (min-width : 500px) {
 	
@@ -157,4 +152,11 @@ tr {
 td {
 	width: 200px;
 }
+
+#instructions {
+	font-family: "Jura";
+	padding-top: 5%;
+	padding-bottom:5%;
+}
+
 }

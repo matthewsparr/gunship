@@ -83,7 +83,10 @@ h1 {
     margin: 0 auto;
 }
 
-#scalesTable {
+
+@media only screen and (min-width : 992px) {
+	
+	#scalesTable {
 	color: white;
 	font-family: Helvetica;
 	width: 40%;
@@ -95,7 +98,6 @@ h1 {
 	display: block;
   	overflow-y: scroll;
 }
-@media only screen and (min-width : 992px) {
 tbody {
     height: 500px;       /* Just for the demo          */
     overflow-y: auto;    /* Trigger vertical scroll    */
@@ -113,11 +115,12 @@ td {
 }
 
 
+
 tbody {
     height: 500px;       /* Just for the demo          */
     overflow-y: auto;    /* Trigger vertical scroll    */
     overflow-x: hidden;  /* Hide the horizontal scroll */
-    	margin-top: 100%;
+
     
 }
 
@@ -131,4 +134,17 @@ td {
 
 #findMatching {
 	width: 100%;
+}
+#scalesTable {
+	color: white;
+	font-family: Helvetica;
+	width: 40%;
+	height:60%;
+	text-align: center;
+	z-index: 500;
+	position: absolute;
+	margin-left: 55%;
+	display: block;
+  	overflow-y: scroll;
+  	margin-top: 66%;
 }

@@ -29,10 +29,7 @@ var mailOptions = {
     text: "Hello world ✔", // plaintext body
     html: "<b>Hello world ✔</b>" // html body
 }
-            // Prevent spam click and default submit behaviour
-            $("#btnSubmit").attr("disabled", true);
-            event.preventDefault();
-            
+  
             // get values from FORM
             mailOptions.from = $("input#email").val();
             mailOptions.to = "gunshipwebdesign@gmail.com";
@@ -78,6 +75,11 @@ smtpTransport.sendMail(mailOptions, function(error, response){
     // if you don't want to use this transport object anymore, uncomment following line
     //smtpTransport.close(); // shut down the connection pool, no more messages
 });
+
+          // Prevent spam click and default submit behaviour
+            $("#btnSubmit").attr("disabled", true);
+            event.preventDefault();
+            
 $("a[data-toggle=\"tab\"]").click(function(e) {
         e.preventDefault();
         $(this).tab("show");

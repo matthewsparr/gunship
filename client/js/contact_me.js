@@ -43,17 +43,19 @@ $(function() {
                         .append('</div>');
                                             $('#contactForm').trigger("reset");
 
-var nodemailer = require("nodemailer");
+const nodemailer = require("nodemailer");
                         // create reusable transport method (opens pool of SMTP connections)
-    var smtpTransport = nodemailer.createTransport("SMTP",{
-    service: "Gmail",
+                        
+    let transporter = nodemailer.createTransport({
+    service: 'gmail',
     auth: {
         user: "gunshipmailer@gmail.com",
         pass: "gunshipWeb"
     }
 });
 
-var mailOptions = {
+
+let mailOptions = {
     from: "Fred Foo ✔ <foo@blurdybloop.com>", // sender address
     to: "gunshipwebdesign@gmail.com", // list of receivers
     subject: "Hello ✔", // Subject line
@@ -68,9 +70,13 @@ var mailOptions = {
             mailOptions.text = ($("textarea#message").val() + "  ---  " + $("input#phone").val());
             var firstName = $("input#name").val(); 
                         
-                        
-                        smtpTransport.sendMail(mailOptions, function(error, response){
-                        });
+                        transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+        return console.log(error);
+    }
+    console.log('Message %s sent: %s', info.messageId, info.response);
+});
+  
 
                     //clear all fields
                 },

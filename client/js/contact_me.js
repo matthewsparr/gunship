@@ -3,12 +3,12 @@ $(function() {
     $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
-            console.log("got to error");
+            process.stdout.write("got to error");
             // additional error messages or events
         },
         submitSuccess: function($form, event) {
             
-                        console.log("got to success");
+                        process.stdout.write("got to success");
 
             // Prevent spam click and default submit behaviour
             $("#btnSubmit").attr("disabled", true);

@@ -95,7 +95,7 @@ h1 {
 	display: block;
   	overflow-y: scroll;
 }
-
+@media only screen and (min-width : 992px) {
 tbody {
     height: 500px;       /* Just for the demo          */
     overflow-y: auto;    /* Trigger vertical scroll    */
@@ -109,4 +109,25 @@ tr {
 
 td {
 	width: 200px;
+}
+}
+
+
+tbody {
+    height: 500px;       /* Just for the demo          */
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
+    	margin-top: 50%;
+}
+
+tr {
+	height: 25px;
+}
+
+td {
+	width: 200px;
+}
+
+#findMatching {
+	width: 100%;
 }

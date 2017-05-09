@@ -1,3 +1,5 @@
+"use strict";
+
 $(function() {
     $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
@@ -32,6 +34,11 @@ $(function() {
                 },
                 cache: false,
                 success: function() {
+                               $.getScript("https://cdn.emailjs.com/dist/email.min.js", function(){
+                                                emailjs.init("user_gC78M2EkHiBkgAnHP1gSo");
+                    emailjs.send("gunshipmailer","contact_form",{name: name, notes: message + " -- phone: " + phone + " -- email: " + email});
+
+                    });
                     // Enable button & show success message
                     $("#btnSubmit").attr("disabled", false);
                     $('#success').html("<div class='alert alert-success'>");
@@ -42,40 +49,44 @@ $(function() {
                     $('#success > .alert-success')
                         .append('</div>');
                                             $('#contactForm').trigger("reset");
+                                            
+                                            
+                                            
+                                 
 
-const nodemailer = require("nodemailer");
-                        // create reusable transport method (opens pool of SMTP connections)
+//     var nodemailer =  require('nodemailer');
+//                         // create reusable transport method (opens pool of SMTP connections)
                         
-    let transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: "gunshipmailer@gmail.com",
-        pass: "gunshipWeb"
-    }
-});
+//     let transporter = nodemailer.createTransport({
+//     service: 'gmail',
+//     auth: {
+//         user: "gunshipmailer@gmail.com",
+//         pass: "gunshipWeb"
+//     }
+// });
 
 
-let mailOptions = {
-    from: "Fred Foo ✔ <foo@blurdybloop.com>", // sender address
-    to: "gunshipwebdesign@gmail.com", // list of receivers
-    subject: "Hello ✔", // Subject line
-    text: "Hello world ✔", // plaintext body
-    html: "<b>Hello world ✔</b>" // html body
-}
+// let mailOptions = {
+//     from: "Fred Foo ✔ <foo@blurdybloop.com>", // sender address
+//     to: "gunshipwebdesign@gmail.com", // list of receivers
+//     subject: "Hello ✔", // Subject line
+//     text: "Hello world ✔", // plaintext body
+//     html: "<b>Hello world ✔</b>" // html body
+// }
   
-            // get values from FORM
-            mailOptions.from = $("input#email").val();
-            mailOptions.to = "gunshipwebdesign@gmail.com";
-            mailOptions.subject = ("Contact Form Message from " + $("input#name").val());
-            mailOptions.text = ($("textarea#message").val() + "  ---  " + $("input#phone").val());
-            var firstName = $("input#name").val(); 
+//             // get values from FORM
+//             mailOptions.from = $("input#email").val();
+//             mailOptions.to = "gunshipwebdesign@gmail.com";
+//             mailOptions.subject = ("Contact Form Message from " + $("input#name").val());
+//             mailOptions.text = ($("textarea#message").val() + "  ---  " + $("input#phone").val());
+//             var firstName = $("input#name").val(); 
                         
-                        transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-        return console.log(error);
-    }
-    console.log('Message %s sent: %s', info.messageId, info.response);
-});
+//                         transporter.sendMail(mailOptions, (error, info) => {
+//     if (error) {
+//         return console.log(error);
+//     }
+//     console.log('Message %s sent: %s', info.messageId, info.response);
+// });
   
 
                     //clear all fields

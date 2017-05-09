@@ -501,6 +501,7 @@ fieldset[disabled] .btn-primary.active {
   color: white;
   background-color: #000000;
   font-weight: 700;
+    border-color: white;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -509,11 +510,13 @@ fieldset[disabled] .btn-primary.active {
 .open .dropdown-toggle.btn-success {
   color: white;
   background-color: #000000;
+  border-color: #ff0cf2;
 }
 .btn-success:active,
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
   background-image: none;
+    border-color: white;
 }
 .btn-success.disabled,
 .btn-success[disabled],

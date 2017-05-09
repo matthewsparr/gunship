@@ -1,14 +1,36 @@
 $(function() {
+    
+     var winston = require('winston');
+
+  //
+  // Requiring `winston-papertrail` will expose
+  // `winston.transports.Papertrail`
+  //
+  require('winston-papertrail').Papertrail;
+
+  var winstonPapertrail = new winston.transports.Papertrail({
+	host: 'logs.papertrailapp.com',
+	port: 12345
+  })
+  
+  winstonPapertrail.on('error', function(err) {
+	// Handle, report, or silently ignore connection errors and failures
+  });
+
+  var logger = new winston.Logger({
+	transports: [winstonPapertrail]
+  });
+
 
     $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
-            process.stdout.write("got to error");
+            logger.info("got to error");
             // additional error messages or events
         },
         submitSuccess: function($form, event) {
             
-                        process.stdout.write("got to success");
+                        logger.info("got to success");
 
             // Prevent spam click and default submit behaviour
             $("#btnSubmit").attr("disabled", true);

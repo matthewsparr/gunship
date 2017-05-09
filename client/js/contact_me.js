@@ -41,9 +41,37 @@ $(function() {
                         .append("<strong>Your message has been sent. </strong>");
                     $('#success > .alert-success')
                         .append('</div>');
+                                            $('#contactForm').trigger("reset");
+
+                        // create reusable transport method (opens pool of SMTP connections)
+    var smtpTransport = nodemailer.createTransport("SMTP",{
+    service: "Gmail",
+    auth: {
+        user: "gunshipmailer@gmail.com",
+        pass: "gunshipWeb"
+    }
+});
+
+var mailOptions = {
+    from: "Fred Foo ✔ <foo@blurdybloop.com>", // sender address
+    to: "bar@blurdybloop.com, baz@blurdybloop.com", // list of receivers
+    subject: "Hello ✔", // Subject line
+    text: "Hello world ✔", // plaintext body
+    html: "<b>Hello world ✔</b>" // html body
+}
+  
+            // get values from FORM
+            mailOptions.from = $("input#email").val();
+            mailOptions.to = "gunshipwebdesign@gmail.com";
+            mailOptions.subject = ("Contact Form Message from " + $("input#name").val());
+            mailOptions.text = ($("textarea#message").val() + "  ---  " + $("input#phone").val());
+            var firstName = $("input#name").val(); 
+                        
+                        
+                        smtpTransport.sendMail(mailOptions, function(error, response){
+                        });
 
                     //clear all fields
-                    $('#contactForm').trigger("reset");
                 },
                 error: function() {
                     // Fail message

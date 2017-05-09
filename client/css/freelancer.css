@@ -108,12 +108,13 @@ header .intro-text .skills {
 }
 
 #brandlogo {
-  content: url("gun2.png");
+   content: url("gun2.png");
    height: 2.4em;
    margin: 0;
    margin-right: 1em;
    padding: 0;
    float: left;
+   min-width: 2em;
 }
 
 .videoPanel {

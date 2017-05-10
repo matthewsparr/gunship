@@ -285,7 +285,7 @@ header .intro-text .skills {
   color: white;
   border-color: #18BC9C;
 }
-@media (min-width: 600px) {
+@media (min-width: 300px) {
   .navbar-custom {
     padding: 25px 0;
     -webkit-transition: padding 0.3s;

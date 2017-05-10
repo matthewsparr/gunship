@@ -186,7 +186,7 @@ header .intro-text .skills {
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 768) {
+@media only screen and (min-width : 400) {
 #video{display:block}
 #videosubstitute{display:none;}
 #videoMessage {height: 200%;  margin: 0; padding: 0; z-index: 2400; background-color: rgba(114, 47, 182, .4);    

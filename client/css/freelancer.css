@@ -107,7 +107,7 @@ header .intro-text .skills {
   font-family: "Jura";
 }
 
-#brandlogo:before {
+#brandlogo {
    content: url("gun2.png");
    height: 2.4em;
    margin: 0;
@@ -115,6 +115,7 @@ header .intro-text .skills {
    padding: 0;
    float: left;
    min-width: 2em;
+   color: white;
 }
 
 .videoPanel {

@@ -149,13 +149,13 @@ header .intro-text .skills {
 #video{display:none}
  
 /* Default display the image to replace the video on all devices */
-#videosubstitute{display: block; height: 200%;}
+#videosubstitute{display: block;}
  
 
-#videoDiv {width: 100%; height: 200%; position: static; background-color: rgba(114, 47, 182, 0.63);
+#videoDiv {width: 100%; height: 100%; position: static; background-color: rgba(114, 47, 182, 0.63);
   z-index: 2200; 
 }
-#videoBlock,#videoMessage {width: 100%; height: 360px; position: absolute; top: 0; left: 0; z-index: 2200;}
+#videoBlock,#videoMessage {width: 100%; height: 360px; position: absolute; top: 0; left: 0; z-index: 2200; margin-bottom: 100px;}
 #video{width: 100%; position: absolute;}
 #videoMessage {height: 200%; padding-top: 20%; z-index: 2400; background-color: rgba(114, 47, 182, .4);    
  }
@@ -186,7 +186,7 @@ header .intro-text .skills {
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 400) {
+@media only screen and (min-width : 992px) {
 #video{display:block}
 #videosubstitute{display:none;}
 #videoMessage {height: 200%;  margin: 0; padding: 0; z-index: 2400; background-color: rgba(114, 47, 182, .4);    
@@ -241,7 +241,7 @@ header .intro-text .skills {
   vertical-align: middle;
   font-size: 100%;
   display: inline-block;
-  padding-top: 4%;
+  padding-top: 5%;
   padding-bottom: 7%;
 }
 .navbar-custom .navbar-brand:hover,
@@ -285,7 +285,7 @@ header .intro-text .skills {
   color: white;
   border-color: #18BC9C;
 }
-@media (min-width: 768) {
+@media (min-width: 768px) {
   .navbar-custom {
     padding: 25px 0;
     -webkit-transition: padding 0.3s;
@@ -316,7 +316,7 @@ section.success {
   background: #000000;
   color: white;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   section {
     padding: 75px 0;
   }
@@ -326,7 +326,8 @@ section.success {
 }
 
 #portfolio {
-  margin-top: 500px;
+  margin-top: 850px;
+  z-index: 9000;
 }
 #portfolio .portfolio-item {
   margin: 0 0 15px;
@@ -373,7 +374,7 @@ section.success {
 #portfolio * {
   z-index: 2;
 }
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   #portfolio .portfolio-item {
     margin: 0 0 30px;
   }

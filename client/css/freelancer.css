@@ -107,7 +107,7 @@ header .intro-text .skills {
   font-family: "Jura";
 }
 
-#brandlogo {
+#brandlogo:before {
    content: url("gun2.png");
    height: 2.4em;
    margin: 0;
